@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, CheckCircle, AlertCircle, RefreshCw, Smartphone, Award, Sparkles, ChevronRight } from 'lucide-react';
-import { MadhubanLogo } from './BrandLogos';
+import { MadhubunLogo } from './BrandLogos';
 
 interface BookOption {
   id: string;
@@ -24,7 +24,7 @@ interface BookOption {
 const BOOKS: BookOption[] = [
   {
     id: 'mathmate',
-    title: 'Madhuban Mathmate',
+    title: 'Madhubun Mathmate',
     grade: 'Class 6',
     chapters: [
       {
@@ -142,7 +142,7 @@ export const InteractivePathwayDemo: React.FC<{ onDownloadClick: () => void }> =
             Preview The ClassMap Adaptive Experience
           </h2>
           <p className="text-slate-600 text-base">
-            Select your Madhuban textbook below to test how the diagnostic engine identifies learning gaps and generates personalized adaptive worksheets in real time.
+            Select your Madhubun textbook below to test how the diagnostic engine identifies learning gaps and generates personalized adaptive worksheets in real time.
           </p>
         </div>
 
@@ -152,9 +152,9 @@ export const InteractivePathwayDemo: React.FC<{ onDownloadClick: () => void }> =
           {/* Top Bar */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <MadhubanLogo size="sm" className="bg-white p-1 rounded" />
+              <MadhubunLogo size="sm" className="bg-white p-1 rounded" />
               <div>
-                <span className="text-xs text-orange-400 font-bold tracking-wider uppercase block">Madhuban Book Companion</span>
+                <span className="text-xs text-orange-400 font-bold tracking-wider uppercase block">Madhubun Book Companion</span>
                 <span className="text-sm font-semibold text-slate-200">Interactive Chapter Practice</span>
               </div>
             </div>
@@ -300,13 +300,15 @@ export const InteractivePathwayDemo: React.FC<{ onDownloadClick: () => void }> =
 
                   <div className="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
                     <span>{selectedChapter.sampleQuestion.adaptiveWorksheet}</span>
-                    <button
-                      onClick={onDownloadClick}
-                      className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-lg font-bold text-[11px] cursor-pointer flex items-center gap-1"
+                    <a
+                      href="https://classmap-student.web.app/dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-lg font-bold text-[11px] cursor-pointer flex items-center gap-1 inline-flex"
                     >
                       <span>Open in App</span>
                       <ChevronRight className="w-3.5 h-3.5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -334,13 +336,15 @@ export const InteractivePathwayDemo: React.FC<{ onDownloadClick: () => void }> =
             <div className="text-xs text-slate-300">
               <span className="font-bold text-white">Ready for full chapter access?</span> Download the ClassMap app to access all chapters and personalized adaptive worksheets.
             </div>
-            <button
-              onClick={onDownloadClick}
-              className="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs hover:from-orange-600 hover:to-amber-600 transition-all cursor-pointer shrink-0 flex items-center gap-2"
+            <a
+              href="https://classmap-student.web.app/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs hover:from-orange-600 hover:to-amber-600 transition-all cursor-pointer shrink-0 flex items-center gap-2 inline-flex"
             >
               <Smartphone className="w-4 h-4" />
               <span>Download ClassMap App</span>
-            </button>
+            </a>
           </div>
 
         </div>

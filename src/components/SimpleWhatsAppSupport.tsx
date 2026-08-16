@@ -4,7 +4,7 @@ import { MessageSquare, HelpCircle, ShieldCheck } from 'lucide-react';
 export const SimpleWhatsAppSupport: React.FC = () => {
   const handleWhatsAppClick = () => {
     // Open clean WhatsApp chat window directly
-    window.open('https://wa.me/?text=Hello%20Madhuban%20ClassMap%20Support', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/?text=Hello%20Madhubun%20ClassMap%20Support', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -25,7 +25,7 @@ export const SimpleWhatsAppSupport: React.FC = () => {
             </h3>
             
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              If you have any difficulty opening the QR code link or downloading the ClassMap app for your Madhuban textbook, chat with our technical support team.
+              If you have any difficulty opening the QR code link or downloading the ClassMap app for your Madhubun textbook, chat with our technical support team.
             </p>
           </div>
 

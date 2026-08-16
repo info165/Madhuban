@@ -1,6 +1,7 @@
 {
-  "name": "Madhuban x Classmap Learning",
-  "description": "Personalised K-12 learning solution combining Madhuban Publishers' trusted curriculum with Classmap's adaptive technology.",
+  "name": "Madhubun x Classmap Learning",
+  "description": "Personalised K-12 learning solution combining Madhubun Publishers' trusted curriculum with Classmap's adaptive technology.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
+

@@ -24,7 +24,7 @@ export const LearningSteps: React.FC<LearningStepsProps> = ({ onDownloadClick })
       title: 'Select Subject, Topic & Sub-Topic',
       highlightTitle: true,
       description: 'Select the exact subject, chapter topic, and sub-topic they want to practice.',
-      bullet1: 'Madhuban syllabus mapping',
+      bullet1: 'Madhubun syllabus mapping',
       bullet2: 'Chapter & Sub-topic granularity',
     },
     {
@@ -149,13 +149,15 @@ export const LearningSteps: React.FC<LearningStepsProps> = ({ onDownloadClick })
             </div>
 
             {/* Banner CTA Button */}
-            <button
-              onClick={onDownloadClick}
-              className="bg-white hover:bg-orange-50 text-[#EA580C] font-extrabold text-sm sm:text-base px-7 py-4 rounded-full shadow-lg transition-all cursor-pointer shrink-0 flex items-center gap-2 group"
+            <a
+              href="https://classmap-student.web.app/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-orange-50 text-[#EA580C] font-extrabold text-sm sm:text-base px-7 py-4 rounded-full shadow-lg transition-all cursor-pointer shrink-0 flex items-center gap-2 group inline-flex"
             >
               <span>Start Learning Journey Now</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
 
           </div>
         </div>

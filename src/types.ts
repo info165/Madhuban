@@ -15,7 +15,7 @@ export interface PathwayStep {
   title: string;
   type: 'diagnostic' | 'content' | 'practice' | 'remediation' | 'mastery';
   description: string;
-  madhubanResource: string;
+  madhubunResource: string;
   classmapTech: string;
   timeEstimate: string;
 }

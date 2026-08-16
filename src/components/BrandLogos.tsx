@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MadhubanLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | 'lg' }> = ({
+export const MadhubunLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | 'lg' }> = ({
   className = '',
   size = 'md'
 }) => {
@@ -12,7 +12,7 @@ export const MadhubanLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | '
 
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      {/* Madhuban Icon Box */}
+      {/* Madhubun Icon Box */}
       <div className="relative bg-[#881337] p-2 rounded-lg shadow-xs shrink-0 flex items-center justify-center">
         <svg width={dimensions.logoSize * 0.75} height={dimensions.logoSize * 0.75} viewBox="0 0 100 100" fill="none">
           {/* Top circle dot */}
@@ -30,10 +30,10 @@ export const MadhubanLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | '
         </svg>
       </div>
 
-      {/* Madhuban Text */}
+      {/* Madhubun Text */}
       <div className="flex flex-col justify-center">
         <div className={`font-serif font-black tracking-wider text-[#9F1239] uppercase leading-none ${dimensions.textClass}`}>
-          MADHUBAN<span className="text-[0.6em] align-top font-sans font-normal ml-0.5">®</span>
+          MADHUBUN<span className="text-[0.6em] align-top font-sans font-normal ml-0.5">®</span>
         </div>
         <div className={`font-sans font-medium tracking-[0.18em] text-[#881337] uppercase leading-tight mt-0.5 ${dimensions.subTextClass}`}>
           EDUCATIONAL BOOKS
@@ -42,6 +42,9 @@ export const MadhubanLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | '
     </div>
   );
 };
+
+// Backwards compatibility alias
+export const MadhubanLogo = MadhubunLogo;
 
 export const ClassMapLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | 'lg' }> = ({
   className = '',

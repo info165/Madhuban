@@ -14,7 +14,7 @@ export const SUBJECT_SERIES: SubjectSeries[] = [
   },
   {
     id: 'mathmate',
-    name: 'Madhuban Mathmate',
+    name: 'Madhubun Mathmate',
     subject: 'Mathematics',
     grades: 'Grades 1 - 8',
     description: 'Conceptual step-by-step math foundation boosted with Classmap\'s real-time step error correction and practice engines.',
@@ -39,7 +39,7 @@ export const SUBJECT_SERIES: SubjectSeries[] = [
     name: 'English Treasure & Grammar',
     subject: 'English Language',
     grades: 'Grades 1 - 8',
-    description: 'Comprehensive English language arts combining Madhuban literature selections with automated speech and grammar proficiency analytics.',
+    description: 'Comprehensive English language arts combining Madhubun literature selections with automated speech and grammar proficiency analytics.',
     tag: 'Language & Literacy',
     color: 'from-purple-600 to-pink-600',
     features: ['Phonics & Pronunciation score', 'Automated essay Feedback', 'Interactive reading logs'],
@@ -68,7 +68,7 @@ export const STAKEHOLDER_BENEFITS: StakeholderBenefit[] = [
     points: [
       {
         title: 'Personalised Learning Paths',
-        description: 'Classmap identifies exact learning gaps and delivers Madhuban explanation modules tailored to each student\'s current grasp.'
+        description: 'Classmap identifies exact learning gaps and delivers Madhubun explanation modules tailored to each student\'s current grasp.'
       },
       {
         title: 'Bite-Sized Gamified Practice',
@@ -118,7 +118,7 @@ export const STAKEHOLDER_BENEFITS: StakeholderBenefit[] = [
       },
       {
         title: 'Seamless Publisher Integration',
-        description: 'Physical Madhuban textbooks and Classmap digital apps work in perfect harmony for blended learning.'
+        description: 'Physical Madhubun textbooks and Classmap digital apps work in perfect harmony for blended learning.'
       }
     ]
   }
@@ -132,7 +132,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Diagnostic Concept Check',
         type: 'diagnostic',
         description: 'Classmap mini-quiz evaluates pre-requisite knowledge on Place Values & Basic Fractions.',
-        madhubanResource: 'Madhuban Mathmate Ch 2 Primer',
+        madhubunResource: 'Madhubun Mathmate Ch 2 Primer',
         classmapTech: 'AI Knowledge Graph Mapping',
         timeEstimate: '5 mins'
       },
@@ -141,7 +141,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Visual Concept Builder',
         type: 'content',
         description: 'Interactive visual fraction strips and bite-sized video explaining equivalent fractions.',
-        madhubanResource: 'Mathmate Animated Concept Video 2.1',
+        madhubunResource: 'Mathmate Animated Concept Video 2.1',
         classmapTech: 'Interactive Math Manipulatives',
         timeEstimate: '10 mins'
       },
@@ -150,7 +150,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Guided Practice Exercises',
         type: 'practice',
         description: 'Low-stakes practice questions with real-time hints and immediate corrective feedback.',
-        madhubanResource: 'Textbook Practice 2A (Foundational)',
+        madhubunResource: 'Textbook Practice 2A (Foundational)',
         classmapTech: 'Adaptive Difficulty Engine',
         timeEstimate: '12 mins'
       },
@@ -159,7 +159,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Remedial Reinforcement',
         type: 'remediation',
         description: 'Personalised mini-drill targeting common error patterns identified in step 3.',
-        madhubanResource: 'Madhuban Skill-Builder Worksheet M-2',
+        madhubunResource: 'Madhubun Skill-Builder Worksheet M-2',
         classmapTech: 'Targeted Remediation Generator',
         timeEstimate: '8 mins'
       },
@@ -168,7 +168,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Mastery Badge Unlocked',
         type: 'mastery',
         description: 'Student demonstrates 85%+ mastery and moves forward to addition of fractions.',
-        madhubanResource: 'Mastery Certificate & Badge',
+        madhubunResource: 'Mastery Certificate & Badge',
         classmapTech: 'Real-time Progress Tracker',
         timeEstimate: 'Completed'
       }
@@ -179,7 +179,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Chapter Readiness Quiz',
         type: 'diagnostic',
         description: 'Confirms strong grasp of fundamental fraction operations.',
-        madhubanResource: 'Mathmate Ch 3 Warmup',
+        madhubunResource: 'Mathmate Ch 3 Warmup',
         classmapTech: 'Rapid Diagnostic Engine',
         timeEstimate: '4 mins'
       },
@@ -188,7 +188,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Core Concept & Word Problems',
         type: 'content',
         description: 'Standard textbook chapter review mixed with interactive problem solving.',
-        madhubanResource: 'Madhuban Mathmate Ch 3 Exercises',
+        madhubunResource: 'Madhubun Mathmate Ch 3 Exercises',
         classmapTech: 'Dynamic Problem Resolver',
         timeEstimate: '15 mins'
       },
@@ -197,7 +197,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Speed & Accuracy Challenge',
         type: 'practice',
         description: 'Timed adaptive drill to build computational fluency.',
-        madhubanResource: 'Mathmate Practice Set 3B',
+        madhubunResource: 'Mathmate Practice Set 3B',
         classmapTech: 'Fluency Tracker',
         timeEstimate: '10 mins'
       },
@@ -206,7 +206,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Competency Check',
         type: 'mastery',
         description: 'Passing summative assessment ready for teacher review.',
-        madhubanResource: 'Competency Test Paper 3',
+        madhubunResource: 'Competency Test Paper 3',
         classmapTech: 'Automated Score Analytics',
         timeEstimate: 'Completed'
       }
@@ -217,7 +217,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Fast-Track Diagnostic',
         type: 'diagnostic',
         description: 'Direct diagnostic testing higher-order thinking (HOTS) questions.',
-        madhubanResource: 'Mathmate HOTS Diagnostic',
+        madhubunResource: 'Mathmate HOTS Diagnostic',
         classmapTech: 'Bloom\'s Level Tester',
         timeEstimate: '5 mins'
       },
@@ -226,7 +226,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Real-World Math Application',
         type: 'content',
         description: 'Case-study based math problems (e.g., budgeting, spatial design).',
-        madhubanResource: 'Madhuban STEM Project Cards',
+        madhubunResource: 'Madhubun STEM Project Cards',
         classmapTech: 'Scenario Simulator',
         timeEstimate: '15 mins'
       },
@@ -235,7 +235,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Olympiad & Extension Challenge',
         type: 'practice',
         description: 'Advanced problem sets with multi-step logical reasoning.',
-        madhubanResource: 'Madhuban Math Olympiad Companion',
+        madhubunResource: 'Madhubun Math Olympiad Companion',
         classmapTech: 'Enrichment Recommender',
         timeEstimate: '15 mins'
       },
@@ -244,7 +244,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Excellence Certification',
         type: 'mastery',
         description: 'Paces ahead into next grade concepts seamlessly.',
-        madhubanResource: 'Advanced Mastery Badge',
+        madhubunResource: 'Advanced Mastery Badge',
         classmapTech: 'Gifted Student Pathway',
         timeEstimate: 'Completed'
       }
@@ -257,7 +257,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Vyakaran & Vartani Assessment',
         type: 'diagnostic',
         description: 'Identify exact spelling and grammar rules requiring reinforcement.',
-        madhubanResource: 'Gunjan Hindi Mala Ch 1 Diagnostic',
+        madhubunResource: 'Gunjan Hindi Mala Ch 1 Diagnostic',
         classmapTech: 'Hindi Phonetic & Spelling Engine',
         timeEstimate: '5 mins'
       },
@@ -266,7 +266,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Audio Kavita & Shabd-Arth',
         type: 'content',
         description: 'Listen to clear poem recitations with interactive word meanings.',
-        madhubanResource: 'Gunjan Audio Reader',
+        madhubunResource: 'Gunjan Audio Reader',
         classmapTech: 'Speech & Pronunciation Guide',
         timeEstimate: '10 mins'
       },
@@ -275,7 +275,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Targeted Grammar Practice',
         type: 'practice',
         description: 'Fill in the blanks and sentence construction with AI feedback.',
-        madhubanResource: 'Madhuban Vyakaran Latika Ex 1',
+        madhubunResource: 'Madhubun Vyakaran Latika Ex 1',
         classmapTech: 'NLP Grammar Evaluator',
         timeEstimate: '10 mins'
       },
@@ -284,7 +284,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
         title: 'Chapter Mastery',
         type: 'mastery',
         description: 'Confident reading and comprehension achieved.',
-        madhubanResource: 'Gunjan Assessment Sheet',
+        madhubunResource: 'Gunjan Assessment Sheet',
         classmapTech: 'Hindi Competency Report',
         timeEstimate: 'Completed'
       }
@@ -295,7 +295,7 @@ export const PATHWAY_SIMULATIONS: Record<string, Record<string, PathwayStep[]>> 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    quote: 'The synergy between Madhuban\'s time-tested textbooks and Classmap\'s adaptive technology has completely transformed our classrooms. Teachers save hours on homework creation, and students actually enjoy practicing math and Hindi at home.',
+    quote: 'The synergy between Madhubun\'s time-tested textbooks and Classmap\'s adaptive technology has completely transformed our classrooms. Teachers save hours on homework creation, and students actually enjoy practicing math and Hindi at home.',
     author: 'Sunita Sharma',
     role: 'Academic Director',
     school: 'Delhi Public School, Dwarka',
@@ -304,7 +304,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '2',
-    quote: 'As a Math teacher, identifying learning gaps across 40 students used to take weeks. With Classmap analyzing Madhuban exercises in real-time, I get an instant diagnostic breakdown and personalized remedial sheets with one click.',
+    quote: 'As a Math teacher, identifying learning gaps across 40 students used to take weeks. With Classmap analyzing Madhubun exercises in real-time, I get an instant diagnostic breakdown and personalized remedial sheets with one click.',
     author: 'Rajesh Nair',
     role: 'Head of Mathematics',
     school: 'St. Xavier’s Senior Secondary School',
@@ -326,14 +326,14 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-1',
     category: 'General',
-    question: 'What is the Madhuban x Classmap partnership?',
-    answer: 'Madhuban Educational Books, one of India’s most trusted K-12 educational publishers, has partnered with Classmap, a leading AI-powered personalised learning platform. Together, they combine physical Madhuban textbooks with Classmap’s adaptive learning software to deliver personalized learning pathways, diagnostic assessments, and automated teacher workflows.'
+    question: 'What is the Madhubun x Classmap partnership?',
+    answer: 'Madhubun Educational Books, one of India’s most trusted K-12 educational publishers, has partnered with Classmap, a leading AI-powered personalised learning platform. Together, they combine physical Madhubun textbooks with Classmap’s adaptive learning software to deliver personalized learning pathways, diagnostic assessments, and automated teacher workflows.'
   },
   {
     id: 'faq-2',
     category: 'Curriculum',
     question: 'Is this solution aligned with NEP 2020 and NCF 2023?',
-    answer: 'Yes! All Madhuban digital content and Classmap assessment engines are mapped directly to competency-based learning standards outlined in NEP 2020 and the National Curriculum Framework (NCF 2023) for CBSE, ICSE, and major State Boards.'
+    answer: 'Yes! All Madhubun digital content and Classmap assessment engines are mapped directly to competency-based learning standards outlined in NEP 2020 and the National Curriculum Framework (NCF 2023) for CBSE, ICSE, and major State Boards.'
   },
   {
     id: 'faq-3',
@@ -351,6 +351,6 @@ export const FAQS: FAQItem[] = [
     id: 'faq-5',
     category: 'Technology',
     question: 'How does the Personalised Learning engine work?',
-    answer: 'As students complete exercises from Madhuban textbooks or Classmap quizzes, the platform analyzes response speed, error types, and conceptual depth. It automatically adjusts question difficulty and recommends specific Madhuban explanation modules or remedial practice sets.'
+    answer: 'As students complete exercises from Madhubun textbooks or Classmap quizzes, the platform analyzes response speed, error types, and conceptual depth. It automatically adjusts question difficulty and recommends specific Madhubun explanation modules or remedial practice sets.'
   }
 ];

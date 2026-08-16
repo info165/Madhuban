@@ -1,5 +1,5 @@
 import React from 'react';
-import { MadhubanLogo, ClassMapLogo } from './BrandLogos';
+import { MadhubunLogo, ClassMapLogo } from './BrandLogos';
 import { ShieldCheck, Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -10,13 +10,13 @@ export const Footer: React.FC = () => {
         {/* Top Logos & Branding */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center md:text-left">
           
-          {/* Madhuban Owner Branding */}
+          {/* Madhubun Owner Branding */}
           <div className="space-y-2">
             <div className="bg-white p-2 rounded-xl inline-block shadow-md">
-              <MadhubanLogo size="md" />
+              <MadhubunLogo size="md" />
             </div>
             <p className="text-xs text-slate-400 max-w-md">
-              Madhuban Educational Books is a leading school textbook publisher in India, empowering millions of students with quality curriculum materials.
+              Madhubun Educational Books is a leading school textbook publisher in India, empowering millions of students with quality curriculum materials.
             </p>
           </div>
 
@@ -37,12 +37,12 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Legal & Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} Madhuban Educational Books. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Madhubun Educational Books. All rights reserved.</p>
           
           <div className="flex items-center gap-4 text-slate-400">
             <a href="#privacy" onClick={(e) => { e.preventDefault(); alert('Privacy Policy: All student data is handled securely for educational purposes.'); }} className="hover:text-white transition">Privacy Policy</a>
             <span>•</span>
-            <a href="#terms" onClick={(e) => { e.preventDefault(); alert('Terms of Use: App store companion for Madhuban textbooks.'); }} className="hover:text-white transition">Terms of Service</a>
+            <a href="#terms" onClick={(e) => { e.preventDefault(); alert('Terms of Use: App store companion for Madhubun textbooks.'); }} className="hover:text-white transition">Terms of Service</a>
             <span>•</span>
             <span className="flex items-center gap-1 text-slate-400">
               Made for Students with <Heart className="w-3 h-3 text-rose-500 fill-current" />

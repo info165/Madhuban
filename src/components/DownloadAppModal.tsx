@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Smartphone, Globe, CheckCircle2, ArrowRight, Download, QrCode } from 'lucide-react';
-import { MadhubanLogo, ClassMapLogo } from './BrandLogos';
+import { MadhubunLogo, ClassMapLogo } from './BrandLogos';
 
 interface DownloadAppModalProps {
   isOpen: boolean;
@@ -36,7 +36,7 @@ export const DownloadAppModal: React.FC<DownloadAppModalProps> = ({ isOpen, onCl
         {/* Modal Header */}
         <div className="text-center space-y-3">
           <div className="flex items-center justify-center gap-3">
-            <MadhubanLogo size="sm" />
+            <MadhubunLogo size="sm" />
             <span className="text-slate-300">•</span>
             <ClassMapLogo size="sm" />
           </div>
@@ -45,16 +45,18 @@ export const DownloadAppModal: React.FC<DownloadAppModalProps> = ({ isOpen, onCl
             Download ClassMap App
           </h3>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Access your Madhuban textbook's interactive chapters, diagnostic tests, and adaptive worksheets on your device.
+            Access your Madhubun textbook's interactive chapters, diagnostic tests, and adaptive worksheets on your device.
           </p>
         </div>
 
         {/* Store Options Buttons */}
         <div className="space-y-3">
           
-          {/* Android Play Store */}
-          <button
-            onClick={() => alert('Redirecting to Google Play Store...')}
+          {/* Android Play Store / Web App direct redirect */}
+          <a
+            href="https://classmap-student.web.app/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold p-4 rounded-2xl transition-all flex items-center justify-between cursor-pointer group shadow-md"
           >
             <div className="flex items-center gap-3">
@@ -62,33 +64,18 @@ export const DownloadAppModal: React.FC<DownloadAppModalProps> = ({ isOpen, onCl
                 <Smartphone className="w-5 h-5" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] text-slate-400 uppercase font-bold tracking-wider">Android App</span>
-                <span className="text-sm font-bold text-white">Download on Google Play</span>
+                <span className="block text-[10px] text-slate-400 uppercase font-bold tracking-wider">Student App</span>
+                <span className="text-sm font-bold text-white">Open ClassMap Dashboard</span>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 text-orange-400 group-hover:translate-x-1 transition-transform" />
-          </button>
-
-          {/* Apple App Store */}
-          <button
-            onClick={() => alert('Redirecting to Apple App Store...')}
-            className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold p-4 rounded-2xl transition-all flex items-center justify-between cursor-pointer group shadow-md"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-                <Download className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <span className="block text-[10px] text-slate-400 uppercase font-bold tracking-wider">iOS App</span>
-                <span className="text-sm font-bold text-white">Download on App Store</span>
-              </div>
-            </div>
-            <ArrowRight className="w-5 h-5 text-amber-400 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
 
           {/* Web App Direct Launch */}
-          <button
-            onClick={() => alert('Opening ClassMap Web Portal...')}
+          <a
+            href="https://classmap-student.web.app/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-orange-50 hover:bg-orange-100 text-orange-900 border border-orange-200 font-bold p-4 rounded-2xl transition-all flex items-center justify-between cursor-pointer group"
           >
             <div className="flex items-center gap-3">
@@ -97,11 +84,11 @@ export const DownloadAppModal: React.FC<DownloadAppModalProps> = ({ isOpen, onCl
               </div>
               <div className="text-left">
                 <span className="block text-[10px] text-orange-700 uppercase font-bold tracking-wider">Browser Access</span>
-                <span className="text-sm font-bold text-orange-900">Continue on Web Application</span>
+                <span className="text-sm font-bold text-orange-900">Continue on Web Portal</span>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 text-orange-600 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
 
         </div>
 

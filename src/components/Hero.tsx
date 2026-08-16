@@ -31,26 +31,30 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadClick }) => {
             {/* Subtitle Body matching Image 1 */}
             <p className="text-slate-600 text-lg sm:text-xl leading-relaxed max-w-2xl font-normal">
               Welcome to the official digital portal for{' '}
-              <strong className="text-[#9F1239] font-bold">Madhuban Educational Books</strong>. Download the{' '}
+              <strong className="text-[#9F1239] font-bold">Madhubun Educational Books</strong>. Download the{' '}
               <strong className="text-[#EA580C] font-bold">Classmap</strong> app to unlock practice tests, identify learning gaps, and receive adaptive worksheets designed to help students score higher.
             </p>
 
             {/* Primary Action Button matching Image 1 */}
             <div className="pt-2 space-y-4">
-              <button
-                onClick={onDownloadClick}
-                className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-extrabold text-lg px-8 py-4.5 rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center gap-3 cursor-pointer group"
+              <a
+                href="https://classmap-student.web.app/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-extrabold text-lg px-8 py-4.5 rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center gap-3 cursor-pointer group inline-flex"
               >
                 <Download className="w-5 h-5 text-white" />
                 <span>Download the App Now</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-1" />
-              </button>
+              </a>
 
               {/* Google Play Store Badge matching Image 1 */}
               <div className="flex items-center gap-3 pt-1">
-                <button
-                  onClick={onDownloadClick}
-                  className="bg-slate-950 hover:bg-slate-900 text-white px-4 py-2 rounded-xl flex items-center gap-2.5 shadow-sm transition cursor-pointer"
+                <a
+                  href="https://classmap-student.web.app/dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-slate-950 hover:bg-slate-900 text-white px-4 py-2 rounded-xl flex items-center gap-2.5 shadow-sm transition cursor-pointer inline-flex"
                 >
                   <svg className="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
                     <path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5.34 0 .65.12.9.32l11.6 8.7c.6.45.6 1.35 0 1.8L5.4 21.68c-.25.2-.56.32-.9.32-.83 0-1.5-.67-1.5-1.5z" fill="#00E676" />
@@ -62,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadClick }) => {
                     <span className="block text-[8px] uppercase tracking-wider text-slate-400 font-semibold">AVAILABLE ON</span>
                     <span className="text-xs font-extrabold text-white">Google Play Store</span>
                   </div>
-                </button>
+                </a>
                 <span className="text-xs font-medium text-slate-500">
                   • Exclusive for Android Users
                 </span>
@@ -82,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadClick }) => {
                   {/* Classroom Illustration Image */}
                   <img
                     src={heroImg}
-                    alt="Madhuban Educational Books Digital Learning"
+                    alt="Madhubun Educational Books Digital Learning"
                     className="w-full h-[340px] sm:h-[380px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
                   />
 
@@ -94,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadClick }) => {
                       </div>
                       <div className="text-left">
                         <span className="block text-[10px] text-slate-500 uppercase font-bold tracking-wider">
-                          MADHUBAN BOOKS
+                          MADHUBUN BOOKS
                         </span>
                         <h4 className="text-xs sm:text-sm font-extrabold text-slate-900">
                           Classmap Digital Companion
@@ -102,12 +106,14 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadClick }) => {
                       </div>
                     </div>
 
-                    <button
-                      onClick={onDownloadClick}
-                      className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md transition-all cursor-pointer shrink-0"
+                    <a
+                      href="https://classmap-student.web.app/dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md transition-all cursor-pointer shrink-0 inline-flex items-center"
                     >
                       Get App
-                    </button>
+                    </a>
                   </div>
 
                 </div>

@@ -11,7 +11,7 @@ export function App() {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   const handleOpenDownload = () => {
-    setIsDownloadModalOpen(true);
+    window.open('https://classmap-student.web.app/dashboard', '_blank', 'noopener,noreferrer');
   };
 
   const handleScrollToSteps = () => {
