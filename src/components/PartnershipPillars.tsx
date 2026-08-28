@@ -25,7 +25,7 @@ export const PartnershipPillars: React.FC = () => {
           <div className="shrink-0 flex items-center gap-3">
             <div className="text-center px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl">
               <span className="block text-amber-300 font-bold text-lg">100%</span>
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider">CBSE / ICSE Aligned</span>
+              <span className="text-[10px] text-slate-400 uppercase tracking-wider">Syllabus Aligned</span>
             </div>
             <div className="text-center px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl">
               <span className="block text-orange-300 font-bold text-lg">AI</span>
