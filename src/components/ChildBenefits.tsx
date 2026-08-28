@@ -1,102 +1,118 @@
 import React from 'react';
-import { Compass, FileText, Target, Cpu, CheckCircle2, Sparkles } from 'lucide-react';
+import { Compass, FileText, Target, Cpu, Sparkles } from 'lucide-react';
+import { Reveal, RevealGroup, RevealItem } from './Reveal';
+
+const BENEFITS = [
+  {
+    id: 'personalized',
+    num: '01',
+    icon: Compass,
+    pill: 'TAILORED FOR EVERY STUDENT',
+    pillClass: 'bg-maroon-50 text-maroon-800 border-maroon-200/70',
+    title: 'Personalised Learning Journey',
+    description: 'Every child learns at their own pace. The app crafts a custom study path matching their specific textbook chapter and grade level.',
+    iconGradient: 'from-maroon-600 to-maroon-800',
+    glow: 'bg-maroon-400/25',
+    cardBg: 'bg-[radial-gradient(140%_120%_at_100%_-10%,var(--color-maroon-50)_0%,#ffffff_55%)]',
+  },
+  {
+    id: 'topic-wise',
+    num: '02',
+    icon: FileText,
+    pill: 'CONCEPT MASTERY',
+    pillClass: 'bg-orange-50 text-orange-800 border-orange-200/70',
+    title: 'Topic-Wise Practice Tests',
+    description: 'Comprehensive practice tests for every subject and sub-topic to solidify concepts, improve speed, and boost exam confidence.',
+    iconGradient: 'from-orange-500 to-orange-700',
+    glow: 'bg-orange-400/25',
+    cardBg: 'bg-[radial-gradient(140%_120%_at_100%_-10%,var(--color-orange-50)_0%,#ffffff_55%)]',
+  },
+  {
+    id: 'diagnostic',
+    num: '03',
+    icon: Target,
+    pill: 'DIAGNOSTIC FEEDBACK',
+    pillClass: 'bg-amber-50 text-amber-800 border-amber-200/70',
+    title: 'Identify & Fix Learning Gaps',
+    description: 'Instant analysis reveals exact problem areas and weak concepts so students can focus where it matters most and score better.',
+    iconGradient: 'from-amber-500 to-orange-600',
+    glow: 'bg-amber-400/25',
+    cardBg: 'bg-[radial-gradient(140%_120%_at_100%_-10%,var(--color-amber-50)_0%,#ffffff_55%)]',
+  },
+  {
+    id: 'adaptive',
+    num: '04',
+    icon: Cpu,
+    pill: 'SMART ENGINE',
+    pillClass: 'bg-maroon-50 text-maroon-800 border-maroon-200/70',
+    title: 'Adaptive Question Generation',
+    description: 'The intelligent system continuously generates customised questions tailored to the child’s skill level to ensure continuous progress.',
+    iconGradient: 'from-maroon-700 via-maroon-600 to-orange-600',
+    glow: 'bg-orange-400/25',
+    cardBg: 'bg-[radial-gradient(140%_120%_at_100%_-10%,var(--color-orange-50)_0%,var(--color-maroon-50)_35%,#ffffff_65%)]',
+  },
+];
 
 export const ChildBenefits: React.FC = () => {
-  const benefits = [
-    {
-      id: 'personalized',
-      icon: Compass,
-      pill: 'TAILORED FOR EVERY STUDENT',
-      title: 'Personalized Learning Journey',
-      description: 'Every child learns at their own pace. The app crafts a custom study path matching their specific textbook chapter and grade level.',
-      iconBg: 'bg-orange-100 text-orange-600',
-    },
-    {
-      id: 'topic-wise',
-      icon: FileText,
-      pill: 'CONCEPT MASTERY',
-      title: 'Topic-Wise Practice Tests',
-      description: 'Comprehensive practice tests for every subject and sub-topic to solidify concepts, improve speed, and boost exam confidence.',
-      iconBg: 'bg-rose-100 text-rose-600',
-    },
-    {
-      id: 'diagnostic',
-      icon: Target,
-      pill: 'DIAGNOSTIC FEEDBACK',
-      title: 'Identify & Fix Learning Gaps',
-      description: 'Instant analysis reveals exact problem areas and weak concepts so students can focus where it matters most and score better.',
-      iconBg: 'bg-amber-100 text-amber-600',
-    },
-    {
-      id: 'adaptive',
-      icon: Cpu,
-      pill: 'SMART ENGINE',
-      title: 'Adaptive Question Generation',
-      description: 'The intelligent system continuously generates customized questions tailored to the child’s skill level to ensure continuous progress.',
-      iconBg: 'bg-emerald-100 text-emerald-600',
-    }
-  ];
-
   return (
-    <section className="py-20 bg-slate-50/50 border-t border-slate-100">
+    <section id="benefits" className="py-20 sm:py-24 bg-slate-50/60 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        
-        {/* Section Header matching Image 2 */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 border border-orange-200/80 text-orange-900 text-xs font-bold tracking-wider uppercase">
+
+        <Reveal className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-bold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5 text-orange-600" />
-            <span>EMPOWERING EVERY STUDENT</span>
+            <span>Empowering Every Student</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-            How Classmap Transforms Your Child's Learning
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-950 tracking-tight leading-tight text-balance">
+            Transform Your Learning
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
             Designed to turn textbook study into an engaging, gap-free learning journey that builds real understanding and higher test scores.
           </p>
-        </div>
+        </Reveal>
 
-        {/* 4 Cards Grid matching Image 2 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((item) => {
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {BENEFITS.map((item) => {
             const Icon = item.icon;
             return (
-              <div
-                key={item.id}
-                className="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6"
-              >
-                <div className="space-y-4">
-                  {/* Top Circle Icon */}
-                  <div className={`w-12 h-12 rounded-2xl ${item.iconBg} flex items-center justify-center shrink-0`}>
-                    <Icon className="w-6 h-6" />
+              <RevealItem key={item.id}>
+                <div className={`group relative h-full ${item.cardBg} rounded-3xl p-7 border border-slate-200/70 shadow-sm hover:shadow-2xl hover:shadow-maroon-900/10 hover:-translate-y-1.5 hover:border-transparent transition-all duration-300 flex flex-col overflow-hidden`}>
+
+                  {/* Faint paper-grain texture for tactile depth */}
+                  <div className="absolute inset-0 bg-grain opacity-40 mix-blend-multiply pointer-events-none" />
+
+                  {/* Decorative giant numeral */}
+                  <span className="font-display absolute -top-3 right-4 text-[5.5rem] font-bold leading-none text-slate-50 group-hover:text-maroon-50 transition-colors duration-300 select-none pointer-events-none">
+                    {item.num}
+                  </span>
+
+                  {/* Soft color glow that blooms on hover */}
+                  <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full ${item.glow} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+
+                  <div className="relative space-y-4">
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.iconGradient} shadow-lg shadow-maroon-900/20 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-7 h-7" />
+                    </div>
+
+                    <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase border ${item.pillClass}`}>
+                      {item.pill}
+                    </div>
+
+                    <h3 className="font-display text-xl font-semibold text-slate-950 leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-
-                  {/* Pill Tag */}
-                  <div className="inline-block bg-slate-100 px-3 py-1 rounded-full text-[10px] font-extrabold text-slate-600 tracking-wider uppercase">
-                    {item.pill}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-extrabold text-slate-950 leading-snug">
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
                 </div>
-
-                {/* Bottom Guarantee Line */}
-                <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-extrabold text-emerald-600">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>Guaranteed Score Improvement</span>
-                </div>
-              </div>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealGroup>
 
       </div>
     </section>

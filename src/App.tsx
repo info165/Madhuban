@@ -1,67 +1,53 @@
 import React, { useState } from 'react';
+import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { PartnershipPillars } from './components/PartnershipPillars';
 import { ChildBenefits } from './components/ChildBenefits';
 import { LearningSteps } from './components/LearningSteps';
-import { InteractivePathwayDemo } from './components/InteractivePathwayDemo';
+import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { DownloadAppModal } from './components/DownloadAppModal';
+
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
 
 export function App() {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
-  const handleOpenDownload = () => {
-    window.open('https://classmap-student.web.app/dashboard', '_blank', 'noopener,noreferrer');
-  };
-
-  const handleScrollToSteps = () => {
-    const el = document.getElementById('how-it-works');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const handleOpenDownload = () => setIsDownloadModalOpen(true);
+  const handleScrollToSteps = () => scrollToId('how-it-works');
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-orange-100 selection:text-orange-900">
-      
-      {/* Top Navbar */}
-      <Navbar
-        onDownloadClick={handleOpenDownload}
-        onExploreSteps={handleScrollToSteps}
-      />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-maroon-100 selection:text-maroon-900">
 
-      {/* Main Single Landing Page Content */}
-      <main>
-        {/* Hero Section */}
-        <Hero
-          onDownloadClick={handleOpenDownload}
-          onExploreSteps={handleScrollToSteps}
-        />
+        <Navbar onDownloadClick={handleOpenDownload} />
 
-        {/* Benefits Section: How Will Your Child Be Helped With This App? */}
-        <ChildBenefits />
+        <main>
+          {/* 1. First impression: what this is and the one action that matters */}
+          <Hero onDownloadClick={handleOpenDownload} onExploreSteps={handleScrollToSteps} />
 
-        {/* Steps Section: 4-Step Personalised Learning Process */}
-        <LearningSteps
-          onDownloadClick={handleOpenDownload}
-        />
+          {/* 2. Trust: why a book publisher + an adaptive-learning company, together */}
+          <PartnershipPillars />
 
-        {/* Live Interactive Demo Widget */}
-        <InteractivePathwayDemo
-          onDownloadClick={handleOpenDownload}
-        />
-      </main>
+          {/* 3. What's in it for the student holding the phone right now */}
+          <ChildBenefits />
 
-      {/* Footer */}
-      <Footer />
+          {/* 4. How the loop actually works */}
+          <LearningSteps />
 
-      {/* App Store Download Modal */}
-      <DownloadAppModal
-        isOpen={isDownloadModalOpen}
-        onClose={() => setIsDownloadModalOpen(false)}
-      />
+          {/* 5. Objection handling */}
+          <FAQSection />
+        </main>
 
-    </div>
+        <Footer onDownloadClick={handleOpenDownload} />
+
+        <DownloadAppModal isOpen={isDownloadModalOpen} onClose={() => setIsDownloadModalOpen(false)} />
+      </div>
+    </MotionConfig>
   );
 }
 

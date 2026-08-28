@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FAQS } from '../data/mockData';
 import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Reveal, RevealGroup, RevealItem } from './Reveal';
 
 export const FAQSection: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>('faq-1');
@@ -10,60 +11,59 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-slate-950 border-t border-slate-800 relative">
+    <section id="faq" className="py-20 sm:py-24 bg-slate-950 border-t border-slate-900 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-            <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
+
+        <Reveal className="text-center space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-maroon-500/10 border border-maroon-400/25 text-maroon-300 text-xs font-semibold">
+            <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight text-balance">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Everything school management, principals, and coordinators need to know about the Madhuban x Classmap solution.
+            Everything school management, principals, and coordinators need to know about the Madhubun × ClassMap solution.
           </p>
-        </div>
+        </Reveal>
 
-        {/* FAQ Accordion List */}
-        <div className="space-y-4">
+        <RevealGroup className="space-y-4">
           {FAQS.map((faq) => {
             const isOpen = openId === faq.id;
             return (
-              <div
-                key={faq.id}
-                className={`bg-slate-900 border rounded-2xl transition-all overflow-hidden ${
-                  isOpen ? 'border-indigo-500/60 shadow-lg shadow-indigo-500/5' : 'border-slate-800 hover:border-slate-700'
-                }`}
-              >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+              <RevealItem key={faq.id}>
+                <div
+                  className={`bg-white/[0.03] border rounded-2xl transition-all overflow-hidden ${
+                    isOpen ? 'border-orange-500/50 shadow-lg shadow-orange-500/5' : 'border-white/10 hover:border-white/20'
+                  }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-800 text-indigo-300 border border-slate-700">
-                      {faq.category}
-                    </span>
-                    <h3 className="text-sm sm:text-base font-bold text-white">
-                      {faq.question}
-                    </h3>
-                  </div>
-                  <div className="p-1 rounded-lg bg-slate-800 text-slate-400 shrink-0">
-                    {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </div>
-                </button>
+                  <button
+                    onClick={() => toggleFAQ(faq.id)}
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-white/10 text-orange-300 border border-white/10 shrink-0">
+                        {faq.category}
+                      </span>
+                      <h3 className="text-sm sm:text-base font-bold text-white">
+                        {faq.question}
+                      </h3>
+                    </div>
+                    <div className="p-1 rounded-lg bg-white/10 text-slate-400 shrink-0">
+                      {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    </div>
+                  </button>
 
-                {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
+                  {isOpen && (
+                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 animate-fadeIn">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealGroup>
 
       </div>
     </section>
